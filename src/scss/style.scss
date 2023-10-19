@@ -1,0 +1,111 @@
+// Обнуление стилей
+@import "nullstyle";
+// < ПОДКЛЮЧЕНИЕ ШРИФТОВ>
+@import url(https://fonts.googleapis.com/css?family=Krub:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Oswald:500,600,700);
+// </ ПОДКЛЮЧЕНИЕ ШРИФТОВ>
+
+// <ПЕРЕМЕННЫЕ>
+$widthContainer: 1330;
+// </ПЕРЕМЕННЫЕ>
+
+// < ШРИФТ И ЦВЕТ ШРИФТА ПО УМОЛЧАНИЮ>
+$fontfamily: "Krub";
+$mainColor: #fff;
+// </ ШРИФТ И ЦВЕТ ШРИФТА ПО УМОЛЧАНИЮ>
+
+// < ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ>
+@import "mixins";
+@import "header";
+@import "footer";
+//components
+@import "./components/main-block";
+@import "./components/accept-challenges";
+@import "./components/find-course";
+@import "./components/about-us";
+@import "./components/why-us";
+@import "./components/start-now";
+@import "./components/feedback";
+@import "./components/subscribe";
+
+// </ ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ>
+
+// < ОСНОВНЫЕ СТИЛИ>
+body {
+  height: 100%;
+  font-family: $fontfamily;
+  color: $mainColor;
+  background: #000;
+  font-size: rem(16); // По умолчанию
+  line-height: em(36, 16); // По умолчанию
+  &._lock {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+[class*="__container"] {
+  max-width: $widthContainer + 30 + px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px rem(15);
+}
+.main {
+  flex: 1 1 auto;
+}
+.btn {
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  font-size: rem(16);
+  padding-left: em(25, 16);
+  padding-right: em(25, 16);
+  font-family: Oswald;
+  font-weight: 700;
+
+  &_white {
+    background-color: #fff;
+    color: #000;
+    padding-top: em(5, 16);
+    padding-bottom: em(5, 16);
+    &:hover {
+      box-shadow: 0 0 rem(10) #fff;
+    }
+  }
+  &_purple {
+    background-color: #b960fd;
+    color: #fff;
+    padding-top: em(15, 16);
+    padding-bottom: em(15, 16);
+    &:hover {
+      box-shadow: 0 0 rem(10) #b960fd;
+    }
+  }
+}
+.title {
+  font-size: rem(58);
+  font-weight: 700;
+  margin-bottom: em(45, 58);
+
+  @media (max-width: 767px) {
+    font-size: rem(46);
+  }
+  @media (max-width: 600px) {
+    font-size: rem(36);
+  }
+
+  span {
+    color: #b960fd;
+    font-weight: normal;
+  }
+}
+.text {
+  font-weight: 500;
+  @media (max-width: 600px) {
+    font-size: rem(14);
+  }
+}

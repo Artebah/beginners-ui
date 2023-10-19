@@ -1,0 +1,169 @@
+.find-course {
+  padding: rem(30) 0;
+
+  // .find-course__container
+
+  &__container {
+    background: url("@img/find-course/edition.png") 99% 4% / auto no-repeat;
+    @media (max-width: 767px) {
+      background: transparent;
+    }
+  }
+
+  // .find-course__button
+
+  &__button {
+    text-align: center;
+
+    button {
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: rem(60);
+      font-weight: 500;
+      color: #fff;
+      font-size: rem(16);
+      text-transform: uppercase;
+      transition: all 0.3s ease 0s;
+
+      @media (max-width: 767px) {
+        gap: rem(30);
+      }
+
+      &:hover {
+        gap: rem(65);
+        @media (max-width: 767px) {
+          gap: rem(35);
+        }
+      }
+    }
+  }
+
+  // .find-course__title
+
+  &__title {
+    font-size: rem(100);
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (max-width: 1200px) {
+      font-size: rem(80);
+    }
+    @media (max-width: 767px) {
+      font-size: rem(60);
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      font-size: rem(45);
+    }
+
+    span {
+      font-size: rem(36);
+      margin-left: em(15, 30);
+      font-weight: 400;
+      text-transform: capitalize;
+      @media (max-width: 600px) {
+        font-size: rem(28);
+      }
+    }
+  }
+
+  // .find-course__cards
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+
+    gap: rem(60);
+    margin-top: rem(125);
+    margin-bottom: rem(65);
+    @media (max-width: 1400px) {
+      gap: rem(30);
+    }
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      margin-top: rem(80);
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      gap: rem(60);
+    }
+  }
+
+  // .find-course__card
+
+  &__card {
+    border: 3px solid #fff;
+    position: relative;
+    padding: rem(85) rem(35) rem(35);
+    text-align: center;
+    @media (max-width: 1400px) {
+      padding: rem(75) rem(15) rem(35);
+    }
+    @media (max-width: 1200px) {
+      flex: 0 0 rem(280);
+    }
+    @media (max-width: 767px) {
+      flex: 0 0 auto;
+      width: 90%;
+      padding: rem(75) rem(40) rem(35);
+    }
+    @media (max-width: 600px) {
+      padding: rem(75) rem(15) rem(35);
+      width: 98%;
+    }
+  }
+}
+.card-find-course {
+  // .card-find-course__number
+
+  &__number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(40);
+    height: rem(40);
+    background-color: #fff;
+    color: #000;
+    font-size: rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  // .card-find-course__title
+
+  &__title {
+    font-size: rem(33);
+    text-transform: uppercase;
+    font-weight: 500;
+    span {
+      color: #b960fd;
+      margin-left: em(10, 33);
+    }
+  }
+
+  // .card-find-course__divider
+
+  &__divider {
+    margin: rem(25) auto;
+    height: 2px;
+    width: rem(55);
+    background: #b960fd;
+  }
+
+  // .card-find-course__text
+
+  &__text {
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: 1.7;
+  }
+
+  // .card-find-course__button
+
+  &__button {
+    margin-top: rem(40);
+  }
+}

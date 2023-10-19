@@ -1,0 +1,106 @@
+.about-us {
+  padding: rem(130) 0px rem(330);
+  background: url(@img/about-us/oval-top.png) 0 0 / auto no-repeat,
+    url(@img/about-us/oval-bottom.png) 100% 100% / auto no-repeat,
+    url(@img/circle-purple.png) 90% 5% / auto no-repeat,
+    url(@img/circle-purple.png) 40% 80% / auto no-repeat;
+
+  @media (max-width: 1500px) {
+    background: url(@img/about-us/oval-top.png) 0 0 / rem(130) no-repeat,
+      url(@img/about-us/oval-bottom.png) 100% 100% / rem(130) no-repeat,
+      url(@img/circle-purple.png) 90% 5% / auto no-repeat,
+      url(@img/circle-purple.png) 40% 80% / auto no-repeat;
+  }
+  @media (max-width: 1200px) {
+    padding: rem(130) 0px rem(200);
+  }
+  @media (max-width: 767px) {
+    padding: rem(100) 0px rem(200);
+  }
+  @media (max-width: 600px) {
+    padding: rem(60) 0px rem(0);
+    background: transparent;
+  }
+
+  // .about-us__container
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(15);
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+      gap: rem(80);
+      text-align: center;
+    }
+  }
+
+  // .about-us__left
+
+  &__left {
+    flex: 0 1 rem(390);
+  }
+
+  // .about-us__title
+
+  //&__title {
+  //}
+
+  // .about-us__text
+
+  &__text {
+    @media (max-width: 767px) {
+      max-width: rem(480);
+    }
+  }
+
+  // .about-us__content
+
+  &__content {
+    margin-top: rem(80);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(30) rem(80);
+    @media (max-width: 900px) {
+      gap: rem(30);
+    }
+  }
+
+  // .about-us__button
+
+  &__button {
+    margin-top: rem(70);
+  }
+
+  // .about-us__right
+
+  &__right {
+    img {
+      @media (max-width: 1100px) {
+        max-width: rem(400);
+      }
+      @media (max-width: 600px) {
+        max-width: rem(300);
+      }
+    }
+  }
+}
+
+.content-about {
+  // .content-about__item
+
+  &__item {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: rem(12);
+
+    span {
+      display: inline-block;
+      width: rem(10);
+      height: rem(10);
+      background-color: #b960fd;
+      margin-right: rem(9);
+    }
+  }
+}

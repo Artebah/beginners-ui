@@ -1,0 +1,27 @@
+@use "sass:math";
+
+@function em($px, $pxFont) {
+  $result: math.div($px, $pxFont) + em;
+  @return $result;
+}
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+@mixin adaptiveValue(
+  $prop,
+  $max,
+  $min,
+  $widthFrom: $widthContainer,
+  $widthTo: 320
+) {
+  @media (max-width: #{$widthFrom + px}) {
+    #{$prop}: calc(
+      #{$min + px} + (#{$max} - #{$min}) * ((100vw - #{$widthTo + px}) /
+            (#{$widthFrom} - #{$widthTo}))
+    );
+  }
+  @media (max-width: #{$widthTo + px}) {
+    #{$prop}: #{$min + px};
+  }
+}

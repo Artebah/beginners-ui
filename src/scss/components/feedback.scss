@@ -1,0 +1,136 @@
+.feedback {
+  padding: 0px 0px 0px 0px;
+
+  // .feedback__container
+
+  //&__container {
+  //}
+
+  // .feedback__title
+
+  &__title {
+    text-transform: uppercase;
+    font-size: rem(93);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: em(85, 93);
+
+    @media (max-width: 1100px) {
+      font-size: rem(73);
+    }
+    @media (max-width: 767px) {
+      font-size: rem(56);
+    }
+
+    span {
+      color: #b960fd;
+      text-transform: lowercase;
+      font-size: rem(42);
+      letter-spacing: 4px;
+      font-weight: 400;
+
+      @media (max-width: 1100px) {
+        font-size: rem(36);
+      }
+      @media (max-width: 767px) {
+        font-size: rem(28);
+      }
+    }
+  }
+
+  // .feedback__buttons
+
+  &__buttons {
+    display: flex;
+    gap: rem(135);
+    justify-content: center;
+    margin-top: rem(80);
+  }
+
+  // .feedback__button
+
+  &__button {
+    background: transparent;
+
+    &_prev {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.feedback-slider {
+  overflow: hidden;
+
+  // .feedback-slider__wrapper
+
+  &__wrapper {
+    padding: 0 0 rem(20);
+  }
+}
+
+.card-feedback {
+  color: #aeaeae;
+  text-align: center;
+  line-height: 1;
+
+  // .card-feedback__img
+
+  &__img {
+    margin-bottom: rem(20);
+  }
+
+  // .card-feedback__name
+
+  &__name {
+    margin-bottom: rem(20);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(19);
+  }
+
+  // .card-feedback__quote
+
+  &__quote {
+    padding: 0 rem(10);
+    font-size: rem(13);
+    font-weight: 700;
+    line-height: 1.8;
+    text-align: left;
+    position: relative;
+
+    max-width: rem(260);
+    margin: 0 auto 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(18);
+      height: rem(15);
+      background-repeat: no-repeat !important;
+    }
+    &::before {
+      background: url(@img/feedback/quote-open.png);
+      top: 0;
+      left: 0;
+      transform: translate(0, -100%);
+    }
+    &::after {
+      background: url(@img/feedback/quote-close.png);
+      right: 0;
+      bottom: 0;
+      transform: translate(0, 100%);
+    }
+  }
+
+  // .card-feedback__stars
+
+  &__stars {
+    display: inline-flex;
+    gap: rem(10);
+    margin-bottom: rem(35);
+  }
+}
